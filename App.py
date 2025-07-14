@@ -1,9 +1,7 @@
 import pandas as pd
 import pickle as pk
 import streamlit as st
-
-model = pk.load(open('/workspaces/Bengaluru-House-Prediction-using-Regression/House_Prediction.pkl','rb'))
-
+model = pk.load(open('House_Prediction.pkl','rb'))
 st.header('Banglore House Prices Predictor')
 
 data = pd.read_csv('/workspaces/Bengaluru-House-Prediction-using-Regression/Cleaned_data.csv')
