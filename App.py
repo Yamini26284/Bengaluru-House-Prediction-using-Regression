@@ -3,8 +3,8 @@ import pickle as pk
 import streamlit as st
 model = pk.load(open('House_Prediction.pkl','rb'))
 st.header('Banglore House Prices Predictor')
-
-data = pd.read_csv('/workspaces/Bengaluru-House-Prediction-using-Regression/Cleaned_data.csv')
+data = pd.read_csv('Cleaned_data.csv')
+#data = pd.read_csv('/workspaces/Bengaluru-House-Prediction-using-Regression/Cleaned_data.csv')
 loc = st.selectbox('Choose the location',data['location'].unique())
 sqft = st.number_input('Enter total sqft')
 beds = st.number_input('Enter No of bedrooms')
